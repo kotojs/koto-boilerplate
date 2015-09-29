@@ -4,7 +4,7 @@
   "description": "A d3 chart framework written in ES6",
   "main": "./dist/commonjs/index.js",
   "scripts": {
-    "start": "node node_modules/.bin/webpack-dev-server --hot --inline",
+    "start": "NODE_ENV=development node node_modules/.bin/webpack-dev-server --hot --inline",
     "test-ci": "NODE_ENV=test ./node_modules/karma/bin/karma start ./karma.conf.js --single-run --browsers PhantomJS,Firefox",
     "test": "NODE_ENV=test ./node_modules/karma/bin/karma start ./karma.conf.js --single-run",
     "tdd": "NODE_ENV=test ./node_modules/karma/bin/karma start ./karma.conf.js",
