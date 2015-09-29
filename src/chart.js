@@ -24,14 +24,16 @@ class BarChart extends Koto {
 
     // add a layer
     chart.layer('bars', this.base.append('g'), {
-      dataBind: function dataBind(data) {
+      // destructuring ftw
+      dataBind(data) {
         return this.selectAll('rect')
           .data(data, d => d.time);
       },
-      insert: function insert() {
+      insert() {
         return this.append('rect');
       }
     })
+    // lifecycle events
     .on('enter', function() {
       var length = this.data().length;
       this.attr('x', (d, i) => chart.x(i + 1) - 0.5 )
@@ -56,11 +58,11 @@ class BarChart extends Koto {
 
     // add another layer
     chart.layer('labels', this.base.append('g'), {
-      dataBind: function dataBind(data) {
+      dataBind(data) {
         return this.selectAll('text')
           .data(data, d => d.time);
       },
-      insert: function insert() {
+      insert() {
         return this.append('text');
       }
     })
