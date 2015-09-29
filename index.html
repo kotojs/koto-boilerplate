@@ -9,7 +9,7 @@
   <svg width="500" height="500">
     <g id="chart"></g>
   </svg>
-  <script src="/dist/koto.js"></script>
+  <script src="/dist/chart.js"></script>
   <script>
     // datasrc.js
     // A simple data source to feed the bar chart visualization. Based on the
@@ -42,8 +42,7 @@
 
     var dataSrc = new DataSrc();
 
-    var barChart = new BarChart(d3.select('#chart'));
-    console.log(BarChart);
+    var barChart = new KotoBarChart(d3.select('#chart'));
 
     barChart.draw(dataSrc.data);
 

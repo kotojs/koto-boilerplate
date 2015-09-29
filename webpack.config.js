@@ -17,11 +17,11 @@ var config = {
     path: path.join(__dirname, 'dist'),
     publicPath: '/dist/',
     // the name of the standalone build file
-    filename: '[name].js',
+    filename: 'chart.js',
     // the standalone build should be wrapped in UMD for interop
     libraryTarget: 'umd',
     // the name of your library in global scope
-    library: 'BarChart'
+    library: 'KotoBarChart'
   },
   externals: {
     // Specify all libraries a user need to have in his app,
