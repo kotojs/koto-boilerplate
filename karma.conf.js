@@ -23,6 +23,7 @@ module.exports = function (config) {
     files: [
       'node_modules/polyfill-function-prototype-bind/bind.js',
       'node_modules/d3/d3.js',
+      'node_modules/koto/dist/koto.js',
       entry
     ],
     webpack: webpackConfig,

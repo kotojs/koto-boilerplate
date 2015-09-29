@@ -7,12 +7,10 @@ var configs = [{
   category: 'Size',
   getter: function (){
     // get value
-    console.log('getter');
     return this.value;
   },
   setter: function (newValue){
-    // Set something
-    console.log('setter');
+    // Set value
     return newValue;
   }
 }, {

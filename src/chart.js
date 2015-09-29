@@ -1,7 +1,8 @@
 import d3 from 'd3';
 import Koto from 'koto';
+import configs from './configs';
 
-export default class __Chart__ extends Koto {
+class BarChart extends Koto {
   constructor(selection) {
     super(selection);
 
@@ -60,3 +61,8 @@ export default class __Chart__ extends Koto {
   }
 }
 
+if (ON_TEST) {
+  require('./chart.spec.js')(BarChart);
+}
+
+export default BarChart;
