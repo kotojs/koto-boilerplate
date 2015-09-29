@@ -26,7 +26,7 @@ var config = {
     // Specify all libraries a user need to have in his app,
     // but which can be loaded externally, e.g. from CDN
     // or included separately with a <script> tag
-
+    'koto', 'koto',
     'd3': 'd3'
   },
 

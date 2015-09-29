@@ -1,5 +1,5 @@
 {
-  "name": "koto",
+  "name": "koto-boilerplate",
   "version": "0.0.2",
   "description": "A d3 chart framework written in ES6",
   "main": "./dist/commonjs/index.js",
@@ -72,6 +72,7 @@
     }
   },
   "dependencies": {
-    "d3": "^3.5.6"
+    "d3": "^3.5.6",
+    "koto": "0.0.2"
   }
 }
