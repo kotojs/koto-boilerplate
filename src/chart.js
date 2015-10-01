@@ -10,9 +10,7 @@ class BarChart extends Koto {
     var chart = this;
 
     // define configs
-    configs.forEach((item) => {
-      chart.configs.set(item.name, item);
-    });
+    this.configs = configs;
 
     // Scales
     chart.x = d3.scale.linear()
@@ -69,7 +67,8 @@ class BarChart extends Koto {
     .on('enter', function() {
       this.attr('x', (d, i) => chart.x(i + 1) - 0.5)
         .attr('y', d => chart.config('height') - chart.y(d.value) - 15)
-        .style('fill', 'steelBlue');
+        .style('fill', 'steelBlue')
+        .text(d => d.value);
     })
     .on('enter:transition', function() {
       this.duration(1000)
@@ -77,8 +76,7 @@ class BarChart extends Koto {
     })
     .on('update:transition', function() {
       this.duration(1000)
-        .attr('x', (d, i) => chart.x(i) - 0.5)
-        .text(d => d.value);
+        .attr('x', (d, i) => chart.x(i) - 0.5);
     })
     .on('exit:transition', function() {
       this.duration(1000)
